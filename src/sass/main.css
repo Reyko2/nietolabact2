@@ -855,8 +855,7 @@ button.log_btn:hover {
 .followers_container div .suggestions .cart .info p {
   font-size: 13px;
 }
-.followers_container div button,
-.followers_container div a {
+.followers_container div button, .followers_container div a {
   color: rgb(0, 149, 246);
 }
 
@@ -1135,8 +1134,7 @@ button.log_btn:hover {
 .reels .reel .likes div .loved {
   display: none;
 }
-.reels .reel .likes div.send,
-.reels .reel .likes div.save {
+.reels .reel .likes div.send, .reels .reel .likes div.save {
   padding-bottom: 18px;
 }
 .reels .reel .likes img {
@@ -1464,8 +1462,7 @@ button.log_btn:hover {
   border-left: 2px solid rgb(239, 239, 239);
   padding: 6px;
 }
-#create_modal button.next_btn_post,
-#create_modal button.share_btn_post {
+#create_modal button.next_btn_post, #create_modal button.share_btn_post {
   background-color: transparent;
   border: none;
   color: rgb(0, 149, 246);
@@ -1560,8 +1557,7 @@ button.log_btn:hover {
   justify-content: flex-start;
   margin: 15px 0;
 }
-.profile_container .profile_info .info .general_info:nth-child(2),
-.profile_container .profile_info .info .general_info:nth-child(3) {
+.profile_container .profile_info .info .general_info:nth-child(2), .profile_container .profile_info .info .general_info:nth-child(3) {
   cursor: pointer;
 }
 @media screen and (max-width: 498px) {
@@ -1758,36 +1754,4 @@ button.log_btn:hover {
 }
 .sign_up .content .download div img {
   height: 40px;
-}
-
-.manual-carousel {
-  display: flex;
-  overflow: hidden;
-  margin-bottom: -15px;
-  margin-left: -100px; /* Adjust the negative margin to make it overflow on the left */
-  margin-right: -100px;
-}
-
-.manual-carousel-wrapper {
-  display: flex; /* Ensure items are in a row */
-}
-
-.manual-carousel-item {
-  margin: 0 10px;
-  text-align: center;
-}
-
-.manual-carousel-item img {
-  width: 63px;
-  height: 63px;
-  border-radius: 50%;
-  background: white;
-  padding: 2px;
-  border: 2px solid #f35309;
-}
-
-.manual-carousel-item p {
-  margin-top: 5px;
-  font-size: 12px;
-  color: #333;
-}
+}/*# sourceMappingURL=main.css.map */
