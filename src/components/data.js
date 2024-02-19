@@ -17,6 +17,15 @@ const post_data = [
     "Wow omg so pretty tapakan mo ako",
     36,
   ],
+  [
+    "./images/images1.jpg",
+    "zeke",
+    1,
+    "./images/postnsfw.jpg",
+    2,
+    "Why is this tagged NSFW",
+    1,
+  ],
 ];
 
 export { post_data };
