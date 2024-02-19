@@ -1,11 +1,23 @@
 import "../App.css";
 import "../sass/vender/bootstrap.css";
 import "../sass/main.css";
+import React, { useState } from "react";
 import { post_data } from "./data.js";
 
 const posts = document.querySelector(".posts");
 
 function Posts() {
+  const [liked, setLiked] = useState(false);
+  const [favorited, setFavorited] = useState(false);
+
+  const toggleLike = () => {
+    setLiked(!liked);
+  };
+
+  const toggleFavorite = () => {
+    setFavorited(!favorited);
+  };
+
   return (
     <div className="main_section">
       <div className="posts_container">
@@ -24,22 +36,31 @@ function Posts() {
                 </div>
               </div>
               <div className="image">
-                <img src={post[3]} alt="Post" />
+                {post[7] === "NSFW" ? (
+                  <div className="image-nsfw-container">
+                    <img src={post[3]} alt="Post" className="image-nsfw" />{" "}
+                    {/* Displaying the image */}
+                    <div className="image-text">
+                      <strong>Sensitive Content</strong>
+                      <br />
+                      This photo contains sensitive content which people may
+                      find offensive or disturbing.
+                    </div>
+                    {}
+                  </div>
+                ) : (
+                  <img src={post[3]} alt="Post" />
+                )}
               </div>
               <div className="desc">
                 <div className="icons">
                   <div className="icon_left d-flex">
-                    <div className="like">
-                      <img
-                        className="not_loved"
-                        src="./images/love.png"
-                        alt="Love"
-                      />
-                      <img
-                        className="loved"
-                        src="./images/heart.png"
-                        alt="Heart"
-                      />
+                    <div className="like" onClick={toggleLike}>
+                      {liked ? (
+                        <img src="./images/heart.png" alt="Heart" />
+                      ) : (
+                        <img src="./images/love.png" alt="Love" />
+                      )}
                     </div>
                     <div className="chat">
                       <button
@@ -62,17 +83,12 @@ function Posts() {
                       </button>
                     </div>
                   </div>
-                  <div className="save not_saved">
-                    <img
-                      className="hide saved"
-                      src="./images/save_black.png"
-                      alt="Saved"
-                    />
-                    <img
-                      className="not_saved"
-                      src="./images/save-instagram.png"
-                      alt="Not Saved"
-                    />
+                  <div className="save not_saved" onClick={toggleFavorite}>
+                    {favorited ? (
+                      <img src="./images/save_black.png" alt="Saved" />
+                    ) : (
+                      <img src="./images/save-instagram.png" alt="Not Saved" />
+                    )}
                   </div>
                 </div>
                 <div className="liked">
