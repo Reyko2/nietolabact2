@@ -36,7 +36,21 @@ function Posts() {
                 </div>
               </div>
               <div className="image">
-                <img src={post[3]} alt="Post" />
+                {post[7] === "NSFW" ? (
+                  <div className="image-nsfw-container">
+                    <img src={post[3]} alt="Post" className="image-nsfw" />{" "}
+                    {/* Displaying the image */}
+                    <div className="image-text">
+                      <strong>Sensitive Content</strong>
+                      <br />
+                      This photo contains sensitive content which people may
+                      find offensive or disturbing.
+                    </div>
+                    {}
+                  </div>
+                ) : (
+                  <img src={post[3]} alt="Post" />
+                )}
               </div>
               <div className="desc">
                 <div className="icons">

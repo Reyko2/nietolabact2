@@ -7,6 +7,7 @@ const post_data = [
     2,
     "coffee not effective on this dude",
     2,
+    "not-nsfw",
   ],
   [
     "./images/images3.jpg",
@@ -16,6 +17,7 @@ const post_data = [
     154,
     "Wow omg so pretty tapakan mo ako",
     36,
+    "not-nsfw",
   ],
   [
     "./images/images1.jpg",
@@ -25,6 +27,7 @@ const post_data = [
     2,
     "Why is this tagged NSFW",
     1,
+    "NSFW",
   ],
 ];
 

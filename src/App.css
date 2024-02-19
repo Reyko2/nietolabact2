@@ -791,6 +791,32 @@ button.log_btn:hover {
 .main_section .posts_container .post .image {
   width: 100%;
 }
+
+/* CSS for NSFW image */
+.image-nsfw-container {
+  position: relative;
+  display: inline-block; /* Ensures the container wraps around the image */
+}
+
+.image-nsfw {
+  filter: blur(5px);
+}
+
+.image-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  text-align: center;
+  color: white;
+  z-index: 1;
+}
+
+.image-text strong {
+  font-weight: bold;
+}
+
 .main_section .posts_container .post .image img {
   width: 100%;
   border-radius: 5px;
